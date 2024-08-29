@@ -1,0 +1,770 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #000000;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center; /* Alinear al centro horizontalmente */
+    align-items: center; /* Alinear al centro verticalmente */
+    z-index: 1000;
+    border-radius: 0 0 10px 10px; /* Bordes redondeados en la parte inferior */
+    transform: translateX(100%); /* Ocultar el navbar inicialmente */
+    transition: transform 0.5s ease-in-out; /* Transición suave para aparición/desaparición */
+}
+
+.navbar.visible {
+    transform: translateX(0); /* Mostrar el navbar */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Orientar los elementos verticalmente */
+    justify-content: space-around; /* Espacio uniforme entre los elementos */
+    height: 100%; /* Ocupa todo el alto disponible */
+}
+
+.navbar ul li {
+    margin: 10px 0; /* Espacio entre elementos */
+    transition: transform 0.3s; /* Transición para el efecto de escala */
+}
+
+.navbar ul li a {
+    color: #ffffff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.3s, font-size 0.3s, color 0.3s; /* Transiciones suaves */
+    padding: 10px; /* Espacio alrededor del texto para mejor clic */
+    border-radius: 5px; /* Bordes redondeados para los enlaces */
+    display: block; /* Asegura que el padding sea efectivo */
+}
+
+.navbar ul li a:hover {
+    color: #189CD8; /* Color de texto en hover */
+    transform: scale(1.2); /* Aumentar tamaño en hover */
+    font-size: 22px; /* Aumentar tamaño del texto en hover */
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente en hover */
+}
+
+.navbar ul li a:hover ~ a {
+    transform: scale(0.8); /* Reducir tamaño de los enlaces hermanos */
+}
+
+.card-section {
+    top: -100px;
+    position: relative; /* Asegura que el contenedor de estrellas esté posicionado relativo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Puedes ajustar esto si es necesario */
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    scroll-behavior: smooth; /* Suaviza el desplazamiento */
+    overflow: hidden; /* Oculta el desbordamiento de estrellas */
+}
+
+.card-content, .profile-card {
+    background: rgba(255, 255, 255, 0.1); /* Fondo muy transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+    width: 100%;
+    max-width: 800px; /* Ajusta el max-width según sea necesario */
+    backdrop-filter: blur(10px); /* Difumina el fondo para mejorar la legibilidad */
+    color: #ffffff; /* Color del texto blanco */
+}
+
+.profile-card {
+    max-width: 600px; /* Ajusta el max-width según sea necesario */
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 300px; /* Aumenta el tamaño a 300px */
+    height: 300px; /* Aumenta el tamaño a 300px */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+    #animated-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #animated-text span {
+        display: inline-block;
+        margin: 0 0.1rem;
+        animation: wave-animation 1.5s infinite;
+    }
+
+    @keyframes wave-animation {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+.profile-info h1 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+    color: #ffffff; /* Color del texto blanco */
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #ffffff; /* Color del texto blanco */
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #ffffff; /* Color del texto blanco */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: #ffffff; /* Color del texto blanco */
+    display: flex;
+    align-items: center; /* Alinea los íconos y el texto verticalmente */
+    font-size: 18px;
+}
+
+ul li i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    font-size: 24px; /* Tamaño del icono */
+}
+
+.profile-personalizada {
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 30px 0;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Difumina el fondo */
+    color: #ffffff;
+}
+
+.profile-personalizada .profile-card {
+    max-width: 800px; /* Ajusta el max-width según sea necesario */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 250px; /* Tamaño ajustado */
+    height: 250px; /* Tamaño ajustado */
+    object-fit: cover;
+    border: 5px solid #189CD8; /* Borde colorido */
+}
+
+.profile-info h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-info a {
+    color: #189CD8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-info a:hover {
+    color: #ffffff;
+}
+
+.profile-info i {
+    color: #189CD8;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.profile-info i:hover {
+    color: #ffffff;
+}
+
+#email-link, #phone-link, #linkedin-link {
+    color: #0056b3; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado inicial */
+    font-weight: bold; /* Texto en negrita */
+    position: relative; /* Posiciona el enlace para el efecto de subrayado */
+    display: inline-block;
+    padding-bottom: 5px; /* Añade espacio debajo del texto para el subrayado */
+    transition: color 0.3s ease-in-out; /* Transición suave para el cambio de color */
+}
+
+#email-link::after, #phone-link::after, #linkedin-link::after {
+    content: ''; /* Genera contenido vacío para el subrayado */
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Grosor del subrayado */
+    bottom: 0;
+    left: 0;
+    background-color: #0056b3; /* Color del subrayado */
+    transform: scaleX(0); /* Esconde el subrayado */
+    transform-origin: bottom right; /* Punto de origen para la animación */
+    transition: transform 0.25s ease-in-out; /* Transición suave para mostrar el subrayado */
+}
+
+#email-link:hover, #phone-link:hover, #linkedin-link:hover {
+    color: #003366; /* Cambia el color al pasar el mouse */
+}
+
+#email-link:hover::after, #phone-link:hover::after, #linkedin-link:hover::after {
+    transform: scaleX(1); /* Muestra el subrayado al pasar el mouse */
+    transform-origin: bottom left; /* Cambia la dirección del subrayado */
+}
+
+#email-link:focus, #phone-link:focus, #linkedin-link:focus {
+    outline: none; /* Elimina el borde de enfoque */
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.5); /* Añade una sombra de enfoque */
+}
+
+
+
+.habilidades-personalizada {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.habilidades-personalizada .card-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.habilidades-personalizada ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.habilidades-personalizada ul li {
+    font-size: 1.2em;
+    color: #666;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.habilidades-personalizada ul li:hover {
+    background-color: #189CD8;
+    color: white;
+    transform: scale(1.05);
+}
+
+.habilidades-personalizada ul li i {
+    font-size: 1.5em;
+    color: #189CD8;
+    transition: color 0.3s ease;
+}
+
+.habilidades-personalizada ul li:hover i {
+    color: white;
+}
+    /* Contenedor principal */
+    .container.proyectos {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
+        margin: 30px 0;
+        padding: 2rem;;
+    }
+
+    /* Título de la sección */
+    .proyectos-titulo {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #ffffff;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .proyectos-titulo::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 4px;
+        background: #3498db;
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+    }
+
+    /* Contenedor de proyectos */
+    .proyectos-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; /* Espacio entre filas */
+    }
+
+    /* Fila de proyectos */
+    .proyectos-row {
+        display: flex;
+        gap: 1.5rem; /* Espacio entre tarjetas */
+        flex-wrap: wrap; /* Ajusta las tarjetas en caso de desbordamiento */
+    }
+
+    /* Tarjeta del proyecto */
+    .proyecto-card {
+        flex: 1 1 calc(33.333% - 1.5rem); /* Tres tarjetas por fila con margen */
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .proyecto-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .proyecto-card img {
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .proyecto-titulo {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        color: #333;
+    }
+
+    .proyecto-descripcion {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+    }
+
+.sobre-mi-personalizada {
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para destacar */
+    position: relative;
+    margin: 30px 0;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Difumina el fondo para mejorar la legibilidad */
+    color: #ffffff;
+}
+
+.sobre-mi-personalizada .card-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.sobre-mi-personalizada .card-content p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+#show-form-btn {
+    background-color: #007bff; /* Color de fondo principal */
+    border-color: #007bff; /* Color del borde */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#show-form-btn:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+    border-color: #0056b3; /* Color del borde al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+#show-form-btn:active {
+    background-color: #004080; /* Color de fondo al hacer clic */
+    border-color: #004080; /* Color del borde al hacer clic */
+    transform: translateY(0); /* Resetear la elevación */
+}
+
+#show-form-btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Sombra al enfocarse */
+}
+
+.experiencia-personalizada {
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para destacar */
+    position: relative;
+    margin: 30px 0;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Difumina el fondo para mejorar la legibilidad */
+    color: #ffffff;
+}
+
+.experiencia-personalizada .card-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.experiencia-personalizada .card-content p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.educacion-personalizada {
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 30px 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+}
+
+.educacion-personalizada .card-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.educacion-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.educacion-item {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    max-width: 600px;
+    width: 90%;
+}
+
+.educacion-item i {
+    color: #189CD8;
+    margin-right: 20px;
+}
+
+.educacion-info h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.educacion-info p {
+    margin: 5px 0 0;
+    color: #cccccc;
+    font-size: 1.2em;
+}
+
+.educacion-item:hover {
+    background-color: #189CD8;
+    color: #ffffff;
+    transform: translateY(-5px);
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Asegura que las estrellas estén detrás del contenido */
+    pointer-events: none; /* Evita que las estrellas interfieran con los clics */
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 1.5s infinite;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+/*SWAL PROPIEDADES */
+
+/* Estilo personalizado para SweetAlert2 */
+.custom-swal-container {
+    background-color: #000; /* Fondo negro para el contenedor */
+}
+
+.custom-swal-popup {
+    background-color: #222; /* Fondo gris oscuro para el popup */
+    color: #fff; /* Texto blanco */
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column; /* Alineación vertical de los elementos */
+}
+
+.custom-swal-popup .swal2-title {
+    font-size: 60px;
+    color: #fff; /* Título en blanco */
+    margin-bottom: 15px;
+}
+
+
+/* Estilo para todos los inputs y textareas */
+.custom-swal-popup .swal2-input{
+    font-size: 14px;
+    background-color: #333; /* Fondo de los campos de entrada */
+    color: #fff; /* Texto de los campos de entrada en blanco */
+    border: 1px solid #444; /* Borde del campo de entrada */
+    border-radius: 5px;
+    width: 85%; /* Ajusta el ancho del campo de entrada */
+    height: 30px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+.custom-swal-popup .swal2-textarea{
+    font-size: 14px;
+    background-color: #333; /* Fondo de los campos de entrada */
+    color: #fff; /* Texto de los campos de entrada en blanco */
+    border: 1px solid #444; /* Borde del campo de entrada */
+    border-radius: 5px;
+    width: 85%; /* Ajusta el ancho del campo de entrada */
+    height: 90px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+
+
+.custom-swal-popup .swal2-input:focus,
+.custom-swal-popup .swal2-textarea:focus {
+    border-color: #189CD8; /* Color del borde en el foco */
+    outline: none; /* Sin borde de enfoque predeterminado */
+}
+
+.custom-swal-popup .form-group {
+    margin-bottom: 10px; /* Espacio entre los grupos de campos */
+    display: flex;
+    flex-direction: column; /* Alineación vertical dentro de cada grupo */
+}
+
+.custom-swal-popup .form-label {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+
+/* Alternar colores de fondo para los grupos de campos */
+.custom-swal-popup .form-group:nth-child(odd) {
+    background-color: #333; /* Fondo gris oscuro alterno para campos */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.custom-swal-popup .form-group:nth-child(even) {
+    background-color: #444; /* Fondo gris más oscuro alterno para campos */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Botones de confirmación y cancelación */
+.custom-swal-popup .swal2-confirm,
+.custom-swal-popup .swal2-cancel {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilo del botón de confirmar */
+.custom-swal-popup .swal2-confirm {
+    background-color: #189CD8; /* Fondo del botón de confirmar */
+    color: #fff; /* Texto del botón de confirmar en blanco */
+}
+
+/* Estilo del botón de cancelar */
+.custom-swal-popup .swal2-cancel {
+    background-color: #555; /* Fondo del botón de cancelar */
+    color: #fff; /* Texto del botón de cancelar en blanco */
+    margin-left: 10px;
+}
+
+/* Hover effects */
+.custom-swal-popup .swal2-confirm:hover {
+    background-color: #0f78c0; /* Fondo del botón de confirmar en hover */
+}
+
+.custom-swal-popup .swal2-cancel:hover {
+    background-color: #444; /* Fondo del botón de cancelar en hover */
+}
+
+/* Media Queries */
+
+/* Estilos para pantallas de tamaño pequeño (móviles en orientación vertical) */
+@media (max-width: 576px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .card-section {
+        padding: 17px;
+    }
+    .card.profile-card {
+        width: 90%;
+    }
+    .card-content{
+        width: 90%;
+        font-size: .9rem;
+    }
+
+    .card-section.experiencia-personalizada,
+    .card-section.habilidades-personalizada,
+    .card-section.proyectos-personalizada,
+    .card-section.sobre-mi-personalizada,
+    .card-section.educacion-personalizada{
+        width: 90%;
+        font-size: .9rem;
+    
+    }
+    .educacion-item{
+        width: 90%;
+    }
+    
+    #animated-text{
+        font-size: 1rem;
+    }
+
+    .profile-card {
+        margin-top: 10px;
+    }
+
+    .card-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-content p {
+        font-size: 0.875rem;
+    }
+
+    .proyectos-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .proyectos-row {
+        display: block;
+    }
+
+    .proyecto-card {
+        margin-bottom: 15px;
+    }
+
+    .educacion-item i {
+        font-size: 2rem;
+    }
+
+    .educacion-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .educacion-info p {
+        font-size: 1rem;
+    }
+    .custom-swal-popup {
+        width: 90%;
+    }
+
+    .custom-swal-popup .swal2-input{
+        width: 70%;
+    }
+    .custom-swal-popup .swal2-textarea {
+        width: 70%;
+        height: 20px;
+    }
+    .container-cards-total {
+        padding-right: 50px;
+    }
+}
+
+
+
