@@ -13,16 +13,16 @@ body {
     height: 100%;
     padding: 20px 20px;
     display: flex;
-    justify-content: center; /* Alinear al centro horizontalmente */
-    align-items: center; /* Alinear al centro verticalmente */
+    justify-content: center; 
+    align-items: center; 
     z-index: 1000;
-    border-radius: 0 0 10px 10px; /* Bordes redondeados en la parte inferior */
-    transform: translateX(100%); /* Ocultar el navbar inicialmente */
-    transition: transform 0.5s ease-in-out; /* Transición suave para aparición/desaparición */
+    border-radius: 0 0 10px 10px; 
+    transform: translateX(100%); 
+    transition: transform 0.5s ease-in-out; 
 }
 
 .navbar.visible {
-    transform: translateX(0); /* Mostrar el navbar */
+    transform: translateX(0); 
 }
 
 .navbar ul {
@@ -30,8 +30,8 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Orientar los elementos verticalmente */
-    justify-content: space-around; /* Espacio uniforme entre los elementos */
+    flex-direction: column; 
+    justify-content: space-around; 
     height: 100%; /* Ocupa todo el alto disponible */
 }
 
@@ -766,7 +766,7 @@ ul li i {
     }
     .custom-swal-popup .swal2-title {
         font-size: 30px;
-        color: #fff; /* Título en blanco */
+        color: #fff;
         margin-bottom: 15px;
     }
 }
