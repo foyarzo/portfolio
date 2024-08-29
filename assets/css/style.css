@@ -764,6 +764,11 @@ ul li i {
     .container-cards-total {
         padding-right: 50px;
     }
+    .custom-swal-popup .swal2-title {
+        font-size: 30px;
+        color: #fff; /* Título en blanco */
+        margin-bottom: 15px;
+    }
 }
 
 
