@@ -452,6 +452,12 @@ ul li i {
     text-align: center;
     backdrop-filter: blur(10px); /* Difumina el fondo para mejorar la legibilidad */
     color: #ffffff;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mayor contraste */
+}
+
+.experiencia-personalizada .card-content {
+    max-width: 1000px; /* Limita el ancho para una mejor legibilidad */
+    margin: 0 auto; /* Centra el contenido */
 }
 
 .experiencia-personalizada .card-content h2 {
@@ -462,12 +468,41 @@ ul li i {
     z-index: 1;
 }
 
-.experiencia-personalizada .card-content p {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    line-height: 1.6;
+.experiencia-personalizada .experiencia-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre cuadros */
+    justify-content: center;
+}
+
+.experiencia-personalizada .experiencia-item {
+    flex: 1 1 calc(50% - 20px); 
+    max-width: calc(50% - 20px); /* Ajusta el tamaño para dos columnas */
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo más claro para los ítems */
+    text-align: left; /* Alinea el texto a la izquierda */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.experiencia-personalizada .experiencia-item h3.empresa {
+    font-size: 1.4em;
+    margin-bottom: 5px;
     color: #ffffff;
 }
+
+.experiencia-personalizada .experiencia-item h4.cargo {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.experiencia-personalizada .experiencia-item p.descripcion {
+    font-size: 1em;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
 
 .educacion-personalizada {
     padding: 40px;
