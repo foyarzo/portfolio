@@ -32,109 +32,109 @@ body {
     display: flex;
     flex-direction: column; 
     justify-content: space-around; 
-    height: 100%; /* Ocupa todo el alto disponible */
+    height: 100%;
 }
 
 .navbar ul li {
-    margin: 10px 0; /* Espacio entre elementos */
-    transition: transform 0.3s; /* Transición para el efecto de escala */
+    margin: 10px 0;
+    transition: transform 0.3s;
 }
 
 .navbar ul li a {
-    color: #ffffff; /* Color del texto de los enlaces */
+    color: #ffffff;
     text-decoration: none;
     font-size: 18px;
-    transition: transform 0.3s, font-size 0.3s, color 0.3s; /* Transiciones suaves */
-    padding: 10px; /* Espacio alrededor del texto para mejor clic */
-    border-radius: 5px; /* Bordes redondeados para los enlaces */
-    display: block; /* Asegura que el padding sea efectivo */
+    transition: transform 0.3s, font-size 0.3s, color 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
 }
 
 .navbar ul li a:hover {
-    color: #189CD8; /* Color de texto en hover */
-    transform: scale(1.2); /* Aumentar tamaño en hover */
-    font-size: 22px; /* Aumentar tamaño del texto en hover */
-    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente en hover */
+    color: #189CD8;
+    transform: scale(1.2);
+    font-size: 22px;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .navbar ul li a:hover ~ a {
-    transform: scale(0.8); /* Reducir tamaño de los enlaces hermanos */
+    transform: scale(0.8);
 }
 
 .card-section {
     top: -100px;
-    position: relative; /* Asegura que el contenedor de estrellas esté posicionado relativo */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Puedes ajustar esto si es necesario */
+    height: 100vh;
     width: 100%;
     padding: 20px;
     margin-bottom: 20px;
-    scroll-behavior: smooth; /* Suaviza el desplazamiento */
-    overflow: hidden; /* Oculta el desbordamiento de estrellas */
+    scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 .card-content, .profile-card {
-    background: rgba(255, 255, 255, 0.1); /* Fondo muy transparente */
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 800px; /* Ajusta el max-width según sea necesario */
-    backdrop-filter: blur(10px); /* Difumina el fondo para mejorar la legibilidad */
-    color: #ffffff; /* Color del texto blanco */
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    color: #ffffff;
 }
 
 .profile-card {
-    max-width: 600px; /* Ajusta el max-width según sea necesario */
+    max-width: 600px;
 }
 
 .profile-photo {
     border-radius: 50%;
-    width: 300px; /* Aumenta el tamaño a 300px */
-    height: 300px; /* Aumenta el tamaño a 300px */
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     margin-bottom: 15px;
 }
 
-    #animated-text {
-        font-size: 1.5rem;
-        font-weight: bold;
-        display: flex;
-        flex-wrap: wrap;
-    }
+#animated-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    #animated-text span {
-        display: inline-block;
-        margin: 0 0.1rem;
-        animation: wave-animation 1.5s infinite;
-    }
+#animated-text span {
+    display: inline-block;
+    margin: 0 0.1rem;
+    animation: wave-animation 1.5s infinite;
+}
 
-    @keyframes wave-animation {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
+@keyframes wave-animation {
+    0%, 100% {
+        transform: translateY(0);
     }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
 .profile-info h1 {
     margin: 10px 0 5px;
     font-size: 24px;
-    color: #ffffff; /* Color del texto blanco */
+    color: #ffffff;
 }
 
 .profile-info p {
     margin: 5px 0;
-    color: #ffffff; /* Color del texto blanco */
+    color: #ffffff;
 }
 
 h2 {
     margin-bottom: 15px;
     font-size: 22px;
-    color: #ffffff; /* Color del texto blanco */
+    color: #ffffff;
 }
 
 ul {
@@ -143,17 +143,18 @@ ul {
     margin: 0;
 }
 
+
 ul li {
     margin-bottom: 10px;
-    color: #ffffff; /* Color del texto blanco */
+    color: #ffffff;
     display: flex;
-    align-items: center; /* Alinea los íconos y el texto verticalmente */
+    align-items: center;
     font-size: 18px;
 }
 
 ul li i {
-    margin-right: 10px; /* Espacio entre el icono y el texto */
-    font-size: 24px; /* Tamaño del icono */
+    margin-right: 10px;
+    font-size: 24px;
 }
 
 .profile-personalizada {
@@ -162,12 +163,12 @@ ul li i {
     position: relative;
     margin: 30px 0;
     text-align: center;
-    backdrop-filter: blur(10px); /* Difumina el fondo */
+    backdrop-filter: blur(10px);
     color: #ffffff;
 }
 
 .profile-personalizada .profile-card {
-    max-width: 800px; /* Ajusta el max-width según sea necesario */
+    max-width: 800px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -177,10 +178,10 @@ ul li i {
 
 .profile-photo {
     border-radius: 50%;
-    width: 250px; /* Tamaño ajustado */
-    height: 250px; /* Tamaño ajustado */
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-    border: 5px solid #189CD8; /* Borde colorido */
+    border: 5px solid #189CD8;
 }
 
 .profile-info h1 {
@@ -219,40 +220,40 @@ ul li i {
 }
 
 #email-link, #phone-link, #linkedin-link {
-    color: #0056b3; /* Color del texto */
-    text-decoration: none; /* Quita el subrayado inicial */
-    font-weight: bold; /* Texto en negrita */
-    position: relative; /* Posiciona el enlace para el efecto de subrayado */
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
     display: inline-block;
-    padding-bottom: 5px; /* Añade espacio debajo del texto para el subrayado */
-    transition: color 0.3s ease-in-out; /* Transición suave para el cambio de color */
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
 }
 
 #email-link::after, #phone-link::after, #linkedin-link::after {
-    content: ''; /* Genera contenido vacío para el subrayado */
+    content: '';
     position: absolute;
     width: 100%;
-    height: 2px; /* Grosor del subrayado */
+    height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0056b3; /* Color del subrayado */
-    transform: scaleX(0); /* Esconde el subrayado */
-    transform-origin: bottom right; /* Punto de origen para la animación */
-    transition: transform 0.25s ease-in-out; /* Transición suave para mostrar el subrayado */
+    background-color: #0056b3;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in-out;
 }
 
 #email-link:hover, #phone-link:hover, #linkedin-link:hover {
-    color: #003366; /* Cambia el color al pasar el mouse */
+    color: #003366;
 }
 
 #email-link:hover::after, #phone-link:hover::after, #linkedin-link:hover::after {
-    transform: scaleX(1); /* Muestra el subrayado al pasar el mouse */
-    transform-origin: bottom left; /* Cambia la dirección del subrayado */
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 #email-link:focus, #phone-link:focus, #linkedin-link:focus {
-    outline: none; /* Elimina el borde de enfoque */
-    box-shadow: 0 0 10px rgba(0, 86, 179, 0.5); /* Añade una sombra de enfoque */
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.5);
 }
 
 
@@ -310,95 +311,91 @@ ul li i {
 .habilidades-personalizada ul li:hover i {
     color: white;
 }
-    /* Contenedor principal */
-    .container.proyectos {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        max-width: 1200px;
-        margin: 30px 0;
-        padding: 2rem;;
-    }
 
-    /* Título de la sección */
-    .proyectos-titulo {
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 2rem;
-        color: #ffffff;
-        font-weight: 700;
-        position: relative;
-    }
+.container.proyectos {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 30px 0;
+    padding: 2rem;
+}
 
-    .proyectos-titulo::after {
-        content: '';
-        display: block;
-        width: 50px;
-        height: 4px;
-        background: #3498db;
-        position: absolute;
-        left: 50%;
-        bottom: -10px;
-        transform: translateX(-50%);
-    }
+.proyectos-titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+    position: relative;
+}
 
-    /* Contenedor de proyectos */
-    .proyectos-container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem; /* Espacio entre filas */
-    }
+.proyectos-titulo::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #3498db;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
 
-    /* Fila de proyectos */
-    .proyectos-row {
-        display: flex;
-        gap: 1.5rem; /* Espacio entre tarjetas */
-        flex-wrap: wrap; /* Ajusta las tarjetas en caso de desbordamiento */
-    }
+.proyectos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
-    /* Tarjeta del proyecto */
-    .proyecto-card {
-        flex: 1 1 calc(33.333% - 1.5rem); /* Tres tarjetas por fila con margen */
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
+.proyectos-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
 
-    .proyecto-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
+.proyecto-card {
+    flex: 1 1 calc(33.333% - 1.5rem);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .proyecto-card img {
-        width: 80%;
-        height: auto;
-        object-fit: cover;
-    }
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 
-    .proyecto-titulo {
-        font-size: 1.5rem;
-        margin: 1rem 0;
-        color: #333;
-    }
+.proyecto-card img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
 
-    .proyecto-descripcion {
-        font-size: 1rem;
-        color: #555;
-        margin-bottom: 1.5rem;
-        padding: 0 1rem;
-    }
+.proyecto-titulo {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.proyecto-descripcion {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
 
 .sobre-mi-personalizada {
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para destacar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     position: relative;
     margin: 30px 0;
     text-align: center;
-    backdrop-filter: blur(10px); /* Difumina el fondo para mejorar la legibilidad */
+    backdrop-filter: blur(10px);
     color: #ffffff;
 }
 
@@ -418,46 +415,46 @@ ul li i {
 }
 
 #show-form-btn {
-    background-color: #007bff; /* Color de fondo principal */
-    border-color: #007bff; /* Color del borde */
-    color: #fff; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    font-size: 16px; /* Tamaño del texto */
-    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #show-form-btn:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el mouse */
-    border-color: #0056b3; /* Color del borde al pasar el mouse */
-    transform: translateY(-2px); /* Efecto de elevación */
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 #show-form-btn:active {
-    background-color: #004080; /* Color de fondo al hacer clic */
-    border-color: #004080; /* Color del borde al hacer clic */
-    transform: translateY(0); /* Resetear la elevación */
+    background-color: #004080;
+    border-color: #004080;
+    transform: translateY(0);
 }
 
 #show-form-btn:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Sombra al enfocarse */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
 
 .experiencia-personalizada {
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para destacar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     position: relative;
     margin: 30px 0;
     text-align: center;
-    backdrop-filter: blur(10px); /* Difumina el fondo para mejorar la legibilidad */
+    backdrop-filter: blur(10px);
     color: #ffffff;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mayor contraste */
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .experiencia-personalizada .card-content {
-    max-width: 1000px; /* Limita el ancho para una mejor legibilidad */
-    margin: 0 auto; /* Centra el contenido */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .experiencia-personalizada .card-content h2 {
@@ -471,18 +468,18 @@ ul li i {
 .experiencia-personalizada .experiencia-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espacio entre cuadros */
+    gap: 20px;
     justify-content: center;
 }
 
 .experiencia-personalizada .experiencia-item {
-    flex: 1 1 calc(50% - 20px); 
-    max-width: calc(50% - 20px); /* Ajusta el tamaño para dos columnas */
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
     padding: 15px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1); /* Fondo más claro para los ítems */
-    text-align: left; /* Alinea el texto a la izquierda */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    background: rgba(255, 255, 255, 0.1);
+    text-align: left;
+    box-sizing: border-box;
 }
 
 .experiencia-personalizada .experiencia-item h3.empresa {
@@ -496,6 +493,7 @@ ul li i {
     margin-bottom: 10px;
     color: #f0f0f0;
 }
+
 
 .experiencia-personalizada .experiencia-item p.descripcion {
     font-size: 1em;
@@ -572,8 +570,8 @@ ul li i {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1; /* Asegura que las estrellas estén detrás del contenido */
-    pointer-events: none; /* Evita que las estrellas interfieran con los clics */
+    z-index: -1;
+    pointer-events: none;
 }
 
 .star {
@@ -599,64 +597,59 @@ ul li i {
     }
 }
 
-/*SWAL PROPIEDADES */
-
-/* Estilo personalizado para SweetAlert2 */
 .custom-swal-container {
-    background-color: #000; /* Fondo negro para el contenedor */
+    background-color: #000;
 }
 
 .custom-swal-popup {
-    background-color: #222; /* Fondo gris oscuro para el popup */
-    color: #fff; /* Texto blanco */
+    background-color: #222;
+    color: #fff;
     border-radius: 10px;
     max-width: 500px;
     margin: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: column; /* Alineación vertical de los elementos */
+    flex-direction: column;
 }
 
 .custom-swal-popup .swal2-title {
     font-size: 45px;
-    color: #fff; /* Título en blanco */
+    color: #fff;
     margin-bottom: 15px;
 }
 
-
-/* Estilo para todos los inputs y textareas */
-.custom-swal-popup .swal2-input{
+.custom-swal-popup .swal2-input {
     font-size: 14px;
-    background-color: #333; /* Fondo de los campos de entrada */
-    color: #fff; /* Texto de los campos de entrada en blanco */
-    border: 1px solid #444; /* Borde del campo de entrada */
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
     border-radius: 5px;
-    width: 85%; /* Ajusta el ancho del campo de entrada */
+    width: 85%;
     height: 30px;
-    box-sizing: border-box; /* Incluye padding y border en el ancho */
-}
-.custom-swal-popup .swal2-textarea{
-    font-size: 14px;
-    background-color: #333; /* Fondo de los campos de entrada */
-    color: #fff; /* Texto de los campos de entrada en blanco */
-    border: 1px solid #444; /* Borde del campo de entrada */
-    border-radius: 5px;
-    width: 85%; /* Ajusta el ancho del campo de entrada */
-    height: 90px;
-    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    box-sizing: border-box;
 }
 
+.custom-swal-popup .swal2-textarea {
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 5px;
+    width: 85%;
+    height: 90px;
+    box-sizing: border-box;
+}
 
 .custom-swal-popup .swal2-input:focus,
 .custom-swal-popup .swal2-textarea:focus {
-    border-color: #189CD8; /* Color del borde en el foco */
-    outline: none; /* Sin borde de enfoque predeterminado */
+    border-color: #189CD8;
+    outline: none;
 }
 
 .custom-swal-popup .form-group {
-    margin-bottom: 10px; /* Espacio entre los grupos de campos */
+    margin-bottom: 10px;
     display: flex;
-    flex-direction: column; /* Alineación vertical dentro de cada grupo */
+    flex-direction: column;
 }
 
 .custom-swal-popup .form-label {
@@ -667,20 +660,18 @@ ul li i {
     margin-left: 25px;
 }
 
-/* Alternar colores de fondo para los grupos de campos */
 .custom-swal-popup .form-group:nth-child(odd) {
-    background-color: #333; /* Fondo gris oscuro alterno para campos */
+    background-color: #333;
     padding: 10px;
     border-radius: 5px;
 }
 
 .custom-swal-popup .form-group:nth-child(even) {
-    background-color: #444; /* Fondo gris más oscuro alterno para campos */
+    background-color: #444;
     padding: 10px;
     border-radius: 5px;
 }
 
-/* Botones de confirmación y cancelación */
 .custom-swal-popup .swal2-confirm,
 .custom-swal-popup .swal2-cancel {
     border: none;
@@ -691,31 +682,25 @@ ul li i {
     margin-top: 10px;
 }
 
-/* Estilo del botón de confirmar */
 .custom-swal-popup .swal2-confirm {
-    background-color: #189CD8; /* Fondo del botón de confirmar */
-    color: #fff; /* Texto del botón de confirmar en blanco */
+    background-color: #189CD8;
+    color: #fff;
 }
 
-/* Estilo del botón de cancelar */
 .custom-swal-popup .swal2-cancel {
-    background-color: #555; /* Fondo del botón de cancelar */
-    color: #fff; /* Texto del botón de cancelar en blanco */
+    background-color: #555;
+    color: #fff;
     margin-left: 10px;
 }
 
-/* Hover effects */
 .custom-swal-popup .swal2-confirm:hover {
-    background-color: #0f78c0; /* Fondo del botón de confirmar en hover */
+    background-color: #0f78c0;
 }
 
 .custom-swal-popup .swal2-cancel:hover {
-    background-color: #444; /* Fondo del botón de cancelar en hover */
+    background-color: #444;
 }
 
-/* Media Queries */
-
-/* Estilos para pantallas de tamaño pequeño (móviles en orientación vertical) */
 @media (max-width: 576px) {
     .navbar-nav {
         text-align: center;
@@ -727,7 +712,7 @@ ul li i {
     .card.profile-card {
         width: 90%;
     }
-    .card-content{
+    .card-content {
         width: 90%;
         font-size: .9rem;
     }
@@ -736,16 +721,15 @@ ul li i {
     .card-section.habilidades-personalizada,
     .card-section.proyectos-personalizada,
     .card-section.sobre-mi-personalizada,
-    .card-section.educacion-personalizada{
+    .card-section.educacion-personalizada {
         width: 90%;
         font-size: .9rem;
-    
     }
-    .educacion-item{
+    .educacion-item {
         width: 90%;
     }
-    
-    #animated-text{
+
+    #animated-text {
         font-size: 1rem;
     }
 
@@ -789,7 +773,7 @@ ul li i {
         width: 90%;
     }
 
-    .custom-swal-popup .swal2-input{
+    .custom-swal-popup .swal2-input {
         width: 70%;
     }
     .custom-swal-popup .swal2-textarea {
@@ -804,7 +788,11 @@ ul li i {
         color: #fff;
         margin-bottom: 15px;
     }
+    .experiencia-item{
+        font-size: .79rem;
+    }
 }
+
 
 
 
