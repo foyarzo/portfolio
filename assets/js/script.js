@@ -5,24 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarIndicator = document.querySelector('.navbar-indicator');
     let isNavbarVisible = false;
 
-    // Añade un evento de clic a cada enlace
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
-            // Evita el comportamiento por defecto del enlace
             event.preventDefault();
-
-            // Obtiene el id del enlace
             const targetId = this.getAttribute('href').substring(1);
-
-            // Selecciona la sección objetivo por su id
             const targetSection = document.getElementById(targetId);
-
-            // Desplaza suavemente hacia la sección objetivo
-            smoothScrollTo(targetSection, 1500); // 1500 ms para la duración
+            smoothScrollTo(targetSection, 1500);
         });
     });
 
-    // Función de desplazamiento suave personalizada
     function smoothScrollTo(targetElement, duration) {
         const start = window.scrollY;
         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
@@ -48,36 +39,29 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(animation);
     }
 
-    // Crear estrellas de manera discontinua
     starsContainers.forEach(container => {
-        const numStars = 100; // Número total de estrellas que quieres
+        const numStars = 100;
 
         for (let i = 0; i < numStars; i++) {
-            // Crear un nuevo elemento de estrella
             const star = document.createElement('div');
             star.classList.add('star');
 
-            // Establecer un tamaño aleatorio para la estrella
-            const size = Math.random() * 3 + 1; // Tamaño entre 1px y 4px
+            const size = Math.random() * 3 + 1;
             star.style.width = `${size}px`;
             star.style.height = `${size}px`;
 
-            // Posicionar la estrella en una posición aleatoria dentro del contenedor
-            const x = Math.random() * 100; // % de la posición horizontal
-            const y = Math.random() * 100; // % de la posición vertical
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
             star.style.top = `${y}%`;
             star.style.left = `${x}%`;
 
-            // Establecer un retardo aleatorio para la animación de la estrella
-            const delay = Math.random() * 5; // Retardo entre 0s y 5s
+            const delay = Math.random() * 5;
             star.style.animationDelay = `${delay}s`;
 
-            // Añadir la estrella al contenedor
             container.appendChild(star);
         }
     });
 
-    // Funciones para mostrar y ocultar el navbar
     function showNavbar() {
         navbar.classList.remove('hidden');
         navbar.classList.add('visible');
@@ -90,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         isNavbarVisible = false;
     }
 
-    // Mostrar el navbar al mover el mouse cerca
     document.addEventListener('mousemove', function(event) {
         const rect = navbar.getBoundingClientRect();
         if (
@@ -109,10 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Mostrar el navbar al hacer hover sobre el navbar
     navbar.addEventListener('mouseenter', showNavbar);
     navbar.addEventListener('mouseleave', hideNavbar);
-
-    // Mostrar el navbar al hacer clic en el indicador
     navbarIndicator.addEventListener('click', showNavbar);
 });
