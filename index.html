@@ -41,8 +41,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6">
                         <div class="card profile-card">
-                            <img src="./assets/img/perfil.JPG" alt="Foto del Programador"
-                                class="card-img-top profile-photo">
+                            <img src="./assets/img/perfil.JPG" alt="Foto del Programador" class="card-img-top profile-photo">
                             <div class="card-body">
                                 <h1 class="card-title">Matias Oyarzo O.</h1>
                                 <p class="card-text" id="animated-text">Desarrollador Full Stack</p>
@@ -50,7 +49,7 @@
                                     <i class="fas fa-map-marker-alt"></i> Loncoche, Chile
                                 </p>
                                 <p class="card-text">
-                                    <i class="fas fa-envelope"></i> <a href="mailto:matias.oyarzo@example.com" id="email-link">matias-oyarzo@hotmail.com</a>
+                                    <i class="fas fa-envelope"></i> <a href="mailto:matias-oyarzo@example.com" id="email-link">matias-oyarzo@hotmail.com</a>
                                 </p>
                                 <p class="card-text">
                                     <i class="fas fa-phone"></i> <a id="phone-link">+56 9 9282 9775</a>
@@ -59,6 +58,17 @@
                                     <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/matias-oyarzo-oyarzo-440618220/"
                                         target="_blank" rel="noopener noreferrer" id="linkedin-link">LinkedIn</a>
                                 </p>
+                                <!-- Botón para descargar CV en español -->
+                                <div class="text-center mt-4">
+                                    <a href="./assets/cv/matias_oyarzo_cv_es.pdf" class="btn btn-primary" download="Matias_Oyarzo_CV_ES.pdf">
+                                        <i class="fas fa-download"></i> Descargar CV(Español)
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <a href="./assets/cv/matias_oyarzo_cv_es.pdf" class="btn btn-primary" download="Matias_Oyarzo_CV_ES.pdf">
+                                        <i class="fas fa-download"></i> Download CV(English)
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -94,7 +104,7 @@
                                 Fuera del código, me motiva explorar tendencias tecnológicas y mantener un equilibrio
                                 saludable con ejercicio y desarrollo personal. ¡Estoy listo para la próxima gran idea!
                             </p>
-                            <button id="show-form-btn" class="btn btn-primary"><i class="fas fa-user"></i> Contactar</button>
+
                         </div>
                     </div>
                 </div>
@@ -112,7 +122,7 @@
                         <div class="experiencia-grid">
                             <div class="experiencia-item">
                                 <h3 class="empresa">Nuestra Agencia</h3>
-                                <h4 class="cargo">Desarrollador PHP</h4>
+                                <h4 class="cargo"><strong> Desarrollador FullStack</strong> (html,css,bootstrap,js,php(mvc), mysql, wordpress,)</h4>
                                 <p class="descripcion">Desarrollo de aplicaciones web utilizando PHP y MySQL, implementando funcionalidades personalizadas para clientes.</p>
                             </div>
                             <div class="experiencia-item">
@@ -138,71 +148,119 @@
     </section>
     
     <section id="habilidades" class="card-section habilidades-personalizada">
-        <div class="stars"></div>
         <div class="container mt-5">
             <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
+                <div class="col-md-8 col-lg-10">
                     <div class="card-content">
                         <h2>Habilidades</h2>
-                        <ul>
-                            <li><i class="fa-brands fa-html5"></i> HTML</li>
-                            <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                            <li><i class="fa-brands fa-js"></i> JavaScript</li>
-                            <li><i class="fa-brands fa-php"></i> PHP</li>
-                            <li><i class="devicon-docker-plain colored"></i> Docker</li>
-                            <li><i class="devicon-java-plain-wordmark colored"></i> Java</li>
-                            <li><i class="devicon-react-original-wordmark colored"></i> React</li>
-                            <li><i class="devicon-vite-original"></i> Vite</li>
-                            <li><i class="devicon-spring-original-wordmark colored"></i> Spring Boot</li>
-                            <li><i class="devicon-typescript-plain colored"></i> TypeScript</li>
-                            <li><i class="devicon-jira-plain-wordmark colored"></i> Jira</li>
-                            <li><i class="devicon-wordpress-plain-wordmark"></i> Wordpress</li>
-                            <li><i class="devicon-woocommerce-plain-wordmark">WooCommerce</i></li>
-                            <li><i class="devicon-bootstrap-plain-wordmark colored"></i> Bootstrap</li>
-                            <li><i class="devicon-mysql-plain-wordmark"></i> MySQL</li>
-                            <li><i class="devicon-dbeaver-plain">Dbeaver</i></li>
-                            <li><i class="devicon-postman-plain colored"></i> Postman</li>
-                            <li><i class="devicon-git-plain-wordmark colored"></i> Git</li>
-                            <li><i class="devicon-figma-plain colored">Figma</i></li>
-                        </ul>
+                        <canvas id="skillsChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section id="proyectos" class="card-section proyectos-personalizada">
         <div class="stars"></div>
         <div class="container proyectos">
-            <h2 class="proyectos-titulo">Proyectos</h2>
+            <h2 class="proyectos-titulo">Proyectos Laborales</h2>
             <div class="proyectos-row">
+                <!-- Proyecto 1 -->
                 <div class="proyecto-card">
-                    <iframe class="iframe-proyectos" src="https://hostalrutadelcopihue.cl/" width="400" height="300" frameborder="0"></iframe>
+                    <img src="/assets/img/hostal.png" alt="Hostal Ruta del Copihue" class="proyecto-imagen">
                     <h5 class="proyecto-titulo">Hostal Ruta del Copihue - Loncoche</h5>
-                    <p class="proyecto-descripcion">Proyecto web para una Hostal en Loncoche - Región de la Araucanía</p>
-                    <a href="https://hostalrutadelcopihue.cl/" target="_blank" class="btn btn-primary">Link</a>
+                    <p class="proyecto-descripcion">Proyecto web para una hostal en Loncoche - Región de la Araucanía</p>
+                    <p class="proyecto-stack"><strong>Stack utilizado:</strong> <span class="stack">Wordpress</span>, <span class="stack">PHP</span>, <span class="stack">MySQL</span>, <span class="stack">HTML</span>, <span class="stack">SEO</span></p>
+                    <button class="btn btn-primary" onclick="mostrarDetallesProyecto('Hostal Ruta del Copihue', 'Stack utilizado: Wordpress, php, mysql, html, posicionamiento seo', 'https://hostalrutadelcopihue.cl/')">Ver detalles</button>
                 </div>
+                <!-- Proyecto 2 -->
                 <div class="proyecto-card">
-                    <iframe class="iframe-proyectos" src="https://sistemaseisa.cl/administracion" width="400" height="300" frameborder="0"></iframe>
-                    <h5 class="proyecto-titulo">Sistema Seisa</h5>
+                    <img src="/assets/img/administracion.png" alt="Sistema Seisa - Administración" class="proyecto-imagen">
+                    <h5 class="proyecto-titulo">Sistema Seisa - Administración</h5>
                     <p class="proyecto-descripcion">Sistema de administración para empresa de energía ecológica</p>
-                    <a href="https://sistemaseisa.cl/administracion" target="_blank" class="btn btn-primary">Link</a>
+                    <p class="proyecto-stack"><strong>Stack utilizado:</strong> <span class="stack">CodeIgniter</span>, <span class="stack">PHP</span>, <span class="stack">MySQL</span>, <span class="stack">JS</span>, <span class="stack">HTML</span>, <span class="stack">CSS</span>, <span class="stack">Bootstrap</span></p>
+                    <button class="btn btn-primary" onclick="mostrarDetallesProyecto('Sistema Seisa - Administración', 'Stack utilizado: CodeIgniter, php, mysql, js,html,css,bootstrap', 'https://sistemaseisa.cl/administracion')">Ver detalles</button>
                 </div>
+                <!-- Proyecto 3 -->
                 <div class="proyecto-card">
-                    <iframe class="iframe-proyectos" src="https://sistemaseisa.cl/mantencion" width="400" height="300" frameborder="0"></iframe>
-                    <h5 class="proyecto-titulo">Sistema Seisa</h5>
+                    <img src="/assets/img/mantencion.png" alt="Sistema Seisa - Mantención" class="proyecto-imagen">
+                    <h5 class="proyecto-titulo">Sistema Seisa - Mantención</h5>
                     <p class="proyecto-descripcion">Sistema de mantención para empresa de energía ecológica</p>
-                    <a href="https://sistemaseisa.cl/mantencion" target="_blank" class="btn btn-primary">Link</a>
+                    <p class="proyecto-stack"><strong>Stack utilizado:</strong> <span class="stack">CodeIgniter</span>, <span class="stack">PHP</span>, <span class="stack">MySQL</span>, <span class="stack">JS</span>, <span class="stack">HTML</span>, <span class="stack">CSS</span>, <span class="stack">Bootstrap</span></p>
+                    <button class="btn btn-primary" onclick="mostrarDetallesProyecto('Sistema Seisa - Mantención', 'Stack utilizado: CodeIgniter, php, mysql, js,html,css,bootstrap', 'https://sistemaseisa.cl/mantencion')">Ver detalles</button>
                 </div>
+                <!-- Proyecto 4 -->
                 <div class="proyecto-card">
-                    <iframe class="iframe-proyectos" src="https://sistemaseisa.cl/comercial" width="400" height="300" frameborder="0"></iframe>
-                    <h5 class="proyecto-titulo">Sistema Seisa</h5>
+                    <img src="/assets/img/comercial.png" alt="Sistema Seisa - Comercial" class="proyecto-imagen">
+                    <h5 class="proyecto-titulo">Sistema Seisa - Comercial</h5>
                     <p class="proyecto-descripcion">Sistema comercial para empresa de energía ecológica</p>
-                    <a href="https://sistemaseisa.cl/comercial" target="_blank" class="btn btn-primary">Link</a>
+                    <p class="proyecto-stack"><strong>Stack utilizado:</strong> <span class="stack">CodeIgniter</span>, <span class="stack">PHP</span>, <span class="stack">MySQL</span>, <span class="stack">JS</span>, <span class="stack">HTML</span>, <span class="stack">CSS</span>, <span class="stack">Bootstrap</span></p>
+                    <button class="btn btn-primary" onclick="mostrarDetallesProyecto('Sistema Seisa - Comercial', 'Stack utilizado: CodeIgniter, php, mysql, js,html,css,bootstrap', 'https://sistemaseisa.cl/comercial')">Ver detalles</button>
+                </div>
+                <!-- Proyecto 5 -->
+                <div class="proyecto-card">
+                    <img src="/assets/img/hostalHabitaciones.png" alt="Sistema Seisa - Comercial" class="proyecto-imagen">
+                    <h5 class="proyecto-titulo">Hostal Ruta del Copihue - Control de Habitaciones</h5>
+                    <p class="proyecto-descripcion">Sistema de control de habitaciones y reservas</p>
+                    <p class="proyecto-stack"><strong>Stack utilizado:</strong> <span class="stack">HTML</span>, <span class="stack">CSS</span>, <span class="stack">Bootstrap</span>, <span class="stack">JavaScript</span>, <span class="stack">PHP</span>, <span class="stack">MySQL</span></p>
+                    <button class="btn btn-primary" onclick="mostrarDetallesProyecto('Hostal Ruta del Copihue - Control de Habitaciones', 'Stack utilizado: Html,css,bootstrap,javascript,php,mysql.', 'https://hostalrutadelcopihue.cl/habitaciones')">Ver detalles</button>
                 </div>
             </div>
         </div>
     </section>
+    
+    <section id="proyectos" class="card-section proyectos-personalizada">
+        <div class="stars"></div>
+        <div class="container proyectos">
+            <h2 class="proyectos-titulo">Proyectos Personales</h2>
+            <div class="proyectos-row">
+                <!-- Proyecto 1 -->
+                <div class="proyecto-card">
+                    <img src="/assets/img/redsocial.png" alt="Nox" class="proyecto-imagen" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="cargarImagenModal('/assets/img/redsocial.png')">
+                    <h5 class="proyecto-titulo">Nox - Red social</h5>
+                    <p class="proyecto-descripcion">Proyecto red social</p>
+                    <span class="estado-desarrollo">En desarrollo</span>
+                    <p class="proyecto-stack"><strong>Stack utilizado:</strong> <span class="stack">PHP Laravel (MVC)</span>, <span class="stack">MySQL</span>, <span class="stack">HTML</span>, <span class="stack">Bootstrap</span>, <span class="stack">CSS</span>, <span class="stack">Javascript</span></p>
+                    <button class="btn btn-primary" onclick="mostrarDetallesProyecto2('Proyecto red social', 'La idea de este proyecto es replicar las funcionalidades comunes de la mayoria de redes sociales como comentar, dar me gusta, chat, perfil personal e interactuar con demas usuarios.')">Ver detalles</button>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="proyecto-card">
+                    <img src="/assets/img/sublimacion.png" alt="Publicidad Loncoche" class="proyecto-imagen" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="cargarImagenModal('/assets/img/sublimacion.png')">
+                    <h5 class="proyecto-titulo">Publicidad Loncoche - Pedidos</h5>
+                    <p class="proyecto-descripcion">Administración de pedidos</p>
+                    <span class="estado-desarrollo">En desarrollo</span>
+                    <p class="proyecto-stack"><strong>Stack utilizado:</strong> <span class="stack">PHP Laravel (MVC)</span>, <span class="stack">Javascript</span>, <span class="stack">MySQL</span>, <span class="stack">HTML</span>, <span class="stack">CSS</span>, <span class="stack">Bootstrap</span></p>
+                    <button class="btn btn-primary" onclick="mostrarDetallesProyecto2('Administración de pedidos', 'Un proyecto que busca ordenar la forma de realizar pedidos de una tienda de sublimacion y actualizar a los clientes de las novedades de sus pedidos.')">Ver detalles</button>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="proyecto-card">
+                    <img src="/assets/img/portfolio.png" alt="Portfolio - Matias Oyarzo" class="proyecto-imagen" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="cargarImagenModal('/assets/img/portfolio.png')">
+                    <h5 class="proyecto-titulo">Portfolio - Matias Oyarzo</h5>
+                    <p class="proyecto-descripcion">Portfolio Digital Desarrollador</p>
+                    <span class="estado-desarrollo">En desarrollo</span>
+                    <p class="proyecto-stack"><strong>Stack utilizado:</strong> <span class="stack">Html</span>, <span class="stack">Css</span>, <span class="stack">Javascript</span>, <span class="stack">Bootstrap</span></p>
+                    <button class="btn btn-primary" onclick="mostrarDetallesProyecto2('Portfolio - Matias Oyarzo', 'El proposito del portfolio digital es mostrar de manera mas interactiva las habilidades personales como desarrollador', '#')">Ver detalles</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal para ver las imágenes en grande -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imageModalLabel">Vista ampliada</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="modalImage" src="" alt="Imagen ampliada" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
     <section id="educacion" class="card-section educacion-personalizada">
         <div class="stars"></div>
@@ -219,6 +277,22 @@
                                     <p>Analista Programador (2018-2021)</p>
                                 </div>
                             </div>
+                            <div class="educacion-item">
+                                <i class="fa-solid fa-graduation-cap fa-3x"></i>
+                                <div class="educacion-info">
+                                    <h3>Bootcamp del Programa de Talento Digital(Actualmente)</h3>
+                                    <p><strong>Full Stack JavaScript Trainee:</strong> Programa intensivo de 6 meses que cubre tecnologías como HTML, CSS, JavaScript, Node.js, Next.js, MySQL y MongoDB. Todo orientado a formar profesionales capaces de enfrentar los desafíos del desarrollo tecnológico en las empresas.</p>
+
+                                </div>
+                            </div>
+                            <div class="educacion-item">
+                                <i class="fa-solid fa-graduation-cap fa-3x"></i>
+                                <div class="educacion-info">
+                                    <h3>Talento Digital</h3>
+                                    <p><strong>Curso de Ingles para desarrolladores:</strong> Programa intensivo de 6 meses diseñado para mejorar las habilidades de inglés, enfocándose en el vocabulario y la comunicación necesarios para desenvolverse con confianza en entornos laborales </p>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -232,6 +306,136 @@
     <script src="./assets/js/letras-color.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/formulario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
+
+<script>
+    // Información sobre cada tecnología
+    var techInfo = {
+        'HTML': 'HTML es el lenguaje de marcado estándar para crear páginas web. Aquí están algunas habilidades clave relacionadas con HTML',
+        'CSS': 'CSS se utiliza para diseñar y maquetar páginas web. Es responsable de la apariencia visual de las páginas.',
+        'JavaScript': 'JavaScript es un lenguaje de programación que permite crear contenido dinámico en las páginas web.',
+        'PHP': 'PHP es un lenguaje de scripting del lado del servidor, utilizado para crear sitios web dinámicos e interactivos.',
+        'Docker': 'Docker es una plataforma de contenedores que facilita la creación, despliegue y gestión de aplicaciones en entornos aislados.',
+        'Java': 'Java es un lenguaje de programación ampliamente utilizado en aplicaciones empresariales y desarrollo de sistemas.',
+        'React': 'React es una biblioteca de JavaScript para construir interfaces de usuario, desarrollada por Facebook.',
+        'Vite': 'Vite es una herramienta de construcción y servidor de desarrollo rápido para aplicaciones modernas de JavaScript.',
+        'Spring Boot': 'Spring Boot es un framework para construir aplicaciones de Java rápidamente.',
+        'TypeScript': 'TypeScript es un superconjunto tipado de JavaScript que permite mejorar la escalabilidad y mantenimiento del código.',
+        'Jira': 'Jira es una herramienta de gestión de proyectos y seguimiento de errores ampliamente utilizada en equipos de desarrollo ágil.',
+        'WordPress': 'WordPress es un sistema de gestión de contenido (CMS) usado para crear y mantener sitios web.',
+        'WooCommerce': 'WooCommerce es un plugin de WordPress que permite convertir un sitio en una tienda de comercio electrónico.',
+        'Bootstrap': 'Bootstrap es un framework CSS para crear sitios web responsivos y amigables con el móvil.',
+        'MySQL': 'MySQL es un sistema de gestión de bases de datos relacional ampliamente usado en aplicaciones web.',
+        'DBeaver': 'DBeaver es una herramienta de administración de bases de datos que soporta múltiples bases de datos SQL.',
+        'Postman': 'Postman es una herramienta de desarrollo utilizada para probar APIs enviando solicitudes HTTP.',
+        'Git': 'Git es un sistema de control de versiones distribuido que permite a los desarrolladores colaborar en proyectos de código.',
+        'Figma': 'Figma es una herramienta de diseño colaborativo basada en la web para interfaces de usuario y experiencias digitales.'
+    };
+
+    // Inicializa el gráfico de barras
+    var ctx = document.getElementById('skillsChart').getContext('2d');
+    var skillsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: [
+                'HTML', 'CSS', 'JavaScript', 'PHP', 'Docker', 'Java', 'React', 
+                'Vite', 'Spring Boot', 'TypeScript', 'Jira', 'WordPress', 
+                'WooCommerce', 'Bootstrap', 'MySQL', 'DBeaver', 'Postman', 'Git', 'Figma'
+            ],
+            datasets: [{
+                label: 'Nivel de Experiencia (%)',
+                data: [90, 90, 80, 70, 50, 70, 70, 70, 70, 70, 30, 90, 90, 90, 90, 70, 70, 70, 60],
+                backgroundColor: [
+                    '#e34c26', '#264de4', '#f7df1e', '#4F5B93', '#2496ed', '#f89820', '#61DBFB', 
+                    '#646CFF', '#6DB33F', '#2F74C0', '#F7B500', '#21759B', '#96588A', '#563d7c', 
+                    '#00758F', '#333C44', '#FF6C37', '#F05033', '#A259FF'
+                ],
+                borderColor: [
+                    '#c0392b', '#2980b9', '#f39c12', '#2c3e50', '#16a085', '#d35400', '#3498db', 
+                    '#3A43B1', '#357031', '#0A61A6', '#E59400', '#1E6C90', '#7A4672', '#452950', 
+                    '#004F63', '#1D2327', '#DB5323', '#A03B28', '#7B33A6'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        stepSize: 10
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            responsive: true,
+            // Evento onClick para las barras del gráfico
+            onClick: function(evt, element) {
+                if (element.length > 0) {
+                    var chartElement = element[0];
+                    var label = skillsChart.data.labels[chartElement.index]; // Tecnología seleccionada
+                    var info = techInfo[label]; // Información de la tecnología
+
+                    // Mostrar SweetAlert con la información de la tecnología
+                    Swal.fire({
+                        title: label,
+                        text: info,
+                        icon: 'info',
+                        confirmButtonText: 'Cerrar'
+                    });
+                }
+            }
+        }
+    });
+
+    function mostrarDetallesProyecto(titulo, descripcion, link) {
+    Swal.fire({
+        title: titulo,
+        text: descripcion,
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Visitar Proyecto',
+        cancelButtonText: 'Cerrar',
+        confirmButtonColor: '#007bff',
+        cancelButtonColor: '#6c757d'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.open(link, '_blank');
+        }
+    });
+}
+
+function mostrarDetallesProyecto2(titulo, descripcion) {
+    Swal.fire({
+        title: titulo,
+        text: descripcion,
+        icon: 'info',
+        showCancelButton: true,
+        showConfirmButton: false,  // Oculta el botón de confirmación
+        cancelButtonText: 'Cerrar',  // Muestra solo el botón "Cerrar"
+        cancelButtonColor: '#6c757d'
+    });
+}
+
+
+    function cargarImagenModal(imagenSrc) {
+        // Cambia la imagen del modal
+        document.getElementById('modalImage').src = imagenSrc;
+
+        // Desplaza la pantalla hacia el modal
+        const modalElement = document.getElementById('imageModal');
+        modalElement.scrollIntoView({ behavior: 'smooth' });
+    }
+
+</script>
+
+
 
 </html>
