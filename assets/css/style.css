@@ -846,3 +846,68 @@ ul li i {
     margin-left: 5px;
 }
 
+.navigation-indicator {
+    position: absolute;
+    top: 10px; /* Ajusta según donde quieras colocar el texto */
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+.navigation-indicator p {
+    margin: 0;
+}
+
+/* Estilo del popup */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Estilo para el overlay */
+.overlay {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.5) !important; /* Fondo semi-transparente */
+    z-index: 9998 !important; /* Detrás del popup */
+}
+
+/* Efecto de difuminado para el contenido */
+.blurred-background {
+    filter: blur(5px) !important; /* Ajusta la intensidad del difuminado */
+    pointer-events: none !important; /* Evita la interacción con el contenido difuminado */
+}
